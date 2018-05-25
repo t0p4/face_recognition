@@ -24,6 +24,10 @@ addons:
       secure: 3d3da5dca5108058bf4b7cae5a31d9f50769919a
 script:
   
-  - sonar-scanner
-  
+  - sonar-scanner \
+  -Dsonar.projectKey=sddhdfmfhyjt \
+  -Dsonar.organization=t0p4-github \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=3d3da5dca5108058bf4b7cae5a31d9f50769919a
   
