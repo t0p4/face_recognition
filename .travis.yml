@@ -9,9 +9,11 @@ python:
 
 before_install:
 - sudo apt-get -qq update
-- sudo apt-get install -qq cmake python-numpy python-scipy libboost-python-dev
+- sudo apt-get install -qq cmake python-numpy python-scipy libboost-python-dev wget zip
 - pip install git+https://github.com/ageitgey/face_recognition_models
-
+- wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip
+- unzip sonar-scanner-cli-3.2.0.1227-linux.zip
+- cd /usr/bin && ln -s /sonar-scanner-cli-3.2.0.1227-linux/bin/sonar-scanner sonar-scanner 
 install:
   - pip install -r requirements.txt
   - pip install tox-travis
